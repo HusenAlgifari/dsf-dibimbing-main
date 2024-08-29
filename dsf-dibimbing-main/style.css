@@ -1,0 +1,644 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Karla", sans-serif;
+  box-sizing: border-box;
+}
+
+/*  ============= header ============= */
+header {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 2%;
+  z-index: 1000;
+}
+
+header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a img {
+  width: 120px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+
+/* Perbaiki posisi ikon burger */
+.burger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: 20px;
+  z-index: 1001; /* Tambahkan z-index agar berada di atas elemen lain */
+}
+
+.burger div {
+  width: 25px; /* Lebar burger ditingkatkan dari 20px menjadi 25px */
+  height: 3px; /* Tinggi burger ditingkatkan dari 2px menjadi 3px */
+  background-color: white;
+  margin: 5px; /* Jarak antar garis ditingkatkan dari 4px menjadi 5px */
+  transition: all 0.3s ease;
+}
+
+
+
+header ul {
+  display: flex;
+  font-family: "Karla", sans-serif;
+  list-style: none;
+}
+
+header ul li {
+  display: block;
+  margin-left: 15px;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  padding: 6px 10px;
+  text-transform: uppercase;
+  transition: background 0.3s;
+}
+
+header ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive navbar */
+@media (max-width: 768px) {
+  /* Pastikan kontainer menu tidak memotong elemen di dalamnya */
+.nav {
+  padding: 0;
+  margin: 0;
+  width: 100%; /* Pastikan lebar 100% agar ikon tidak terpotong */
+}
+
+/* Perbaiki posisi ikon burger */
+.burger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  margin: 10px; /* Sesuaikan margin sesuai dengan kebutuhan */
+  z-index: 1001; /* Tambahkan z-index untuk memastikan tidak ada elemen lain yang menutupi */
+  position: fixed; /* Pastikan ikon tetap di posisi yang diinginkan */
+  top: 5px; /* Atur posisi dari atas */
+  right: 20px; /* Atur posisi dari kanan */
+}
+
+.burger div {
+  width: 25px; /* Sesuaikan lebar ikon */
+  height: 3px; /* Sesuaikan tinggi ikon */
+  background-color: white;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+  
+
+  header ul {
+    position: absolute;
+    top: 63px;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+
+  header ul.show {
+    transform: translateX(0);
+  }
+
+  header ul li {
+    margin: 20px 0;
+  }
+
+  header ul li a {
+    font-size: 20px;
+  }
+}
+
+/* ============= Banner ============= */
+.banner {
+width: 100%;
+height: 100vh;
+background-image: url("./assets/village-drone.jpeg"); /* Update with your image path */
+background-position: center center;
+background-repeat: no-repeat;
+background-size: cover;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.banner-content {
+text-align: center;
+color: white;
+background-color: rgba(0, 0, 0, 0.5);
+padding: 20px;
+border-radius: 10px;
+margin: 50px;
+}
+
+.title {
+font-size: 3vw;
+text-transform: uppercase;
+}
+
+.banner-content p {
+margin: 10px 0;
+font-size: 1.2vw;
+}
+
+.banner-content hr {
+border: 1px solid white;
+margin: 10px 0;
+}
+
+.book-now-button {
+background-color: #b49f6b;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+font-size: 1.5vw;
+cursor: pointer;
+margin-top: 20px;
+text-transform: uppercase;
+}
+
+.book-now-button:hover {
+background-color: #8e7c56;
+}
+
+
+/* ============= Our Room ============= */
+.our-room {
+  padding: 5% 10%;
+  background: #f5f4f0;
+}
+
+.title-section {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  width: 30%;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card h5 {
+  text-align: center;
+  margin: 15px 0 10px;
+}
+
+.card h5 a {
+  color: #b49f6b;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+.card p {
+  font-size: 0.9em;
+  text-align: center;
+  color: #666;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 4vw;
+  }
+  header ul li a {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 45%; /* Mengubah ukuran card di tablet */
+  }
+  .title {
+font-size: 5vw; /* Perbesar font untuk judul di ponsel */
+}
+
+.banner-content p {
+font-size: 3vw; /* Perbesar font untuk paragraf di ponsel */
+}
+
+.book-now-button {
+font-size: 4vw; /* Perbesar font untuk tombol di ponsel */
+padding: 12px 18px; /* Sesuaikan padding untuk tombol di ponsel */
+}
+}
+
+@media (max-width: 480px) {
+  .banner {
+    height: 100vh;
+  }
+  .title {
+    font-size: 5vw;
+  }
+  .our-room {
+    padding: 5% 5%;
+  }
+  .card-wrapper {
+    flex-direction: column; /* Mengubah arah flex menjadi kolom */
+  }
+  .card {
+    width: 100%; /* Card akan menempati seluruh lebar layar di tampilan mobile */
+  }
+}
+
+/* ============= Discover Our Story ============= */
+.story-section {
+display: flex;
+padding: 5% 10%;
+align-items: center;
+justify-content: space-between;
+}
+
+.story-content {
+flex: 1;
+margin-right: 5%;
+}
+
+.story-title {
+font-size: 2em;
+margin-bottom: 20px;
+}
+
+.story-content p {
+font-size: 1em;
+color: #666;
+line-height: 1.5em;
+}
+
+.story-images {
+flex: 1;
+display: flex;
+justify-content: center;
+}
+
+.story-img {
+width: 100%;
+max-width: 400px;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+.story-section {
+flex-direction: column;
+}
+
+.story-content {
+text-align: center;
+margin-bottom: 20px;
+margin-right: 0;
+}
+
+.story-images {
+justify-content: center;
+margin-top: 20px;
+}
+
+.story-img {
+width: 80%;
+}
+}
+
+.lol img{
+width: 300px;
+}
+
+.booking-form {
+padding: 5% 10%;
+background: #f5f4f0;
+text-align: center;
+margin-top: 20px;
+}
+
+.form-container {
+display: flex;
+justify-content: center;
+gap: 10px;
+align-items: center;
+}
+
+.booking-form label {
+margin-right: 10px;
+font-size: 14px;
+}
+
+.booking-form input[type="text"] {
+padding: 10px;
+width: 150px;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-size: 14px;
+}
+
+.booking-form button {
+background-color: #b49f6b;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 14px;
+margin: 10px;
+}
+
+.booking-form button:hover {
+background-color: #8e7c56;
+}
+
+@media (max-width: 768px) {
+.form-container {
+  flex-direction: column;
+  gap: 15px;
+}
+
+.booking-form input[type="text"] {
+  width: 100%;
+}
+}
+
+.eat-drink-section {
+display: flex;
+padding: 5% 10%;
+align-items: center;
+justify-content: space-between;
+background-color: #f5f4f0;
+}
+
+.image-collage {
+display: flex;
+flex-direction: column;
+gap: 10px;
+max-width: 50%;
+}
+
+.collage-img {
+border-radius: 10px;
+width: 85%;
+height: auto;
+box-shadow: 0px 3px 5px gra;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.eat-drink-content {
+max-width: 45%;
+margin-left: 5%;
+}
+
+.eat-drink-content h2 {
+font-size: 1em;
+color: #b49f6b;
+text-transform: uppercase;
+letter-spacing: 2px;
+margin-bottom: 10px;
+}
+
+.eat-drink-content h1 {
+font-size: 2.5em;
+margin-bottom: 20px;
+}
+
+.eat-drink-content p {
+font-size: 1em;
+color: #666;
+line-height: 1.5em;
+margin-bottom: 20px;
+}
+
+.menu-button {
+padding: 10px 30px;
+background-color: #b49f6b;
+color: white;
+text-transform: uppercase;
+text-decoration: none;
+font-size: 1em;
+border-radius: 5px;
+transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+background-color: #8e7c56;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.eat-drink-section {
+  flex-direction: column;
+  text-align: center;
+}
+
+.image-collage {
+  width: 100%;
+  flex-direction: column;
+  gap: 15px; /* Meningkatkan jarak antar gambar */
+  margin-bottom: 20px;
+}
+
+.collage-img {
+  width: 90%; /* Memperbesar ukuran gambar */
+  height: auto;
+}
+.eat-drink-content h1 {
+font-size: 2.5em;
+display: block;
+margin-bottom: 20px;
+}
+.eat-drink-content {
+  margin-left: 0;
+  margin-top: 30px;
+  max-width: 100%;
+  margin-bottom: 40px;
+}
+}
+
+.contact-details {
+/* background-color: #f4f4f4; */
+padding: 20px;
+margin: 40px 0;
+text-align: center;
+border-radius: 8px;
+}
+
+.contact-form {
+background-color: #b49f6b34;
+padding: 30px;
+margin: 40px 0;
+border-radius: 8px;
+text-align: left;
+max-width: 600px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.contact-form h2 {
+margin-bottom: 20px;
+}
+
+.contact-form label {
+display: block;
+margin-bottom: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+width: 100%;
+padding: 10px;
+margin-bottom: 20px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+.contact-form button {
+background-color: #b49f6b;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.contact-form button:hover {
+background-color: #8e7c56;
+}
+
+footer {
+background-color: #333;
+color: white;
+padding: 20px 10%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-size: 14px;
+}
+
+.footer-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+}
+
+.footer-left p {
+margin: 5px 0;
+}
+
+.footer-left a {
+color: #b49f6b;
+text-decoration: none;
+margin: 0 5px;
+}
+
+.footer-left a:hover {
+text-decoration: underline;
+}
+
+.footer-right img {
+width: 24px;
+margin: 0 10px;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+
+.footer-right img:hover {
+transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+.footer-container {
+flex-direction: column;
+text-align: center;
+}
+
+.footer-right {
+margin-top: 20px;
+}
+}
+
+#section-baru {
+  position: relative;
+  background-image: url('https://wallpaperaccess.com/full/4401180.jpg'); /* Ganti dengan path ke gambar Anda */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Warna background hitam transparan */
+  padding: 100px;
+  height: 100vh;
+}
+
+#section-baru h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#section-baru p {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background-color: #d2c295; /* Warna tombol sesuai dengan gambar */
+  color: #333;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 25px;
+}
+
+.btn-primary:hover {
+  background-color: #b8a672; /* Warna tombol saat dihover */
+  color: #fff;
+}
+

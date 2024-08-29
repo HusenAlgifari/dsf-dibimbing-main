@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Husen4lgifari</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico.png" />
+  <link rel="stylesheet" href="./style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet" />
+
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <a href="">
+        <img src="./assets/village-bali-website-white-logo.png" alt="" />
+      </a>
+      <nav>
+        <ul id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#our">Our Room</a></li>
+          <li><a href="#rest">Restaurant</a></li>
+          <li><a href="#kon">Contact</a></li>
+        </ul>
+        <div class="burger" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="banner">
+      <div class="banner-content">
+        <h2 class="title">Book Here</h2>
+        <p>Take Advantage of the Lowest Available Prices.</p>
+        <hr />
+        <p>If you happen to find a better online daily rate, we will match your price.</p>
+        <button class="book-now-button">Book Now</button>
+      </div>
+    </section>
+
+    <section id="our" class="our-room">
+      <h2 class="title-section">Our Room</h2>
+      <div class="card-wrapper">
+        <div class="card">
+          <img src="./assets/room.jpg" alt="" />
+          <h5><a href="">Deluxe Queen room</a></h5>
+          <p>
+            This double room has a minibar, lounge chair, private garden and
+            air conditioning.
+          </p>
+        </div>
+
+        <div class="card">
+          <img src="./assets/0545_ro_02_p_2048x1536.jpg" alt="" />
+          <h5><a href="">Deluxe Queen room</a></h5>
+          <p>
+            This double room has a minibar, lounge chair, private garden and
+            air conditioning.
+          </p>
+        </div>
+
+        <div class="card">
+          <img src="./assets/8.jpg" alt="" />
+          <h5><a href="">Deluxe Queen room</a></h5>
+          <p>
+            This double room has a minibar, lounge chair, private garden and
+            air conditioning.
+          </p>
+        </div>
+      </div>
+
+      <section class="booking-form">
+        <div class="form-container">
+          <form action="#" method="get">
+            <label for="check-in">Check in:</label>
+            <input type="text" id="check-in" name="check-in" placeholder="dd/mm/yyyy">
+            <label for="check-out">Check out:</label>
+            <input type="text" id="check-out" name="check-out" placeholder="dd/mm/yyyy">
+            <label for="promo-code">Promo code:</label>
+            <input type="text" id="promo-code" name="promo-code" placeholder="">
+            <button type="submit">BOOK NOW</button>
+          </form>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <section class="story-section">
+    <div class="story-content">
+      <h2 class="story-title">Discover Our Story</h2>
+
+      <p>
+        Located in Uluwatu, 200 m from Impossible Beach, Village Bali provides accommodation
+        with an outdoor swimming pool, free private parking, a bar and a garden.
+      </p>
+      <div class="lol">
+        <img src="assets/Village-Full-Lockup-Gold-transparent.png" alt="">
+      </div>
+    </div>
+    <div class="story-images">
+      <img src="./assets/village-bali-photo-collage.png" alt="Village Overview" class="story-img" />
+    </div>
+  </section>
+
+  <section id="section-baru" class="hero">
+    <div class="hero-content">
+      <h2>VISIT OUR FANTASTIC VILLAS</h2>
+      <p>
+        Located in Uluwatu, 200 m from Impossible Beach, Village Bali provides accommodation with an outdoor swimming
+        pool, free private parking, a bar and a garden.
+      </p>
+      <a href="#" class="btn-primary">DISCOVER OUR ROOM</a>
+    </div>
+  </section>
+
+  <section id="rest" class="eat-drink-section">
+    <div class="image-collage">
+      <img src="assets/PKC_5786-2048x1365.jpg" alt="Drink 1" class="collage-img" />
+      <img src="assets/DSC05208-2048x1365.jpg" alt="Dining Area" class="collage-img" />
+    </div>
+    <div class="eat-drink-content">
+      <h2>Best Choice</h2>
+      <h1>EAT AND DRINK</h1>
+      <p>Enjoy the dining experience with various menu selections at our restaurant.</p>
+      <a href="#" class="menu-button">GO TO MENU</a>
+    </div>
+  </section>
+
+  <section class="contact-details">
+    <div class="contact-info">
+      <h2>Contact Details</h2>
+      <p>Feel free to reach out to us for any inquiries or further information:</p>
+      <p><strong>Email:</strong> husen4lgifari@gmail.com</p>
+      <p><strong>Phone:</strong> +62 83129055606</p>
+    </div>
+  </section>
+
+  <section id="kon" class="contact-form">
+    <h2>Contact Us</h2>
+    <form action="#" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <p>&copy; 2024 husen4lgifari. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+      </div>
+      <!-- <div class="footer-right">
+        <a href="#"><img src="./assets/facebook-icon.png" alt="Facebook"></a>
+        <a href="#"><img src="./assets/twitter-icon.png" alt="Twitter"></a>
+        <a href="#"><img src="./assets/instagram-icon.png" alt="Instagram"></a>
+      </div> -->
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("nav-links");
+      navLinks.classList.toggle("show");
+    }
+  </script>
+</body>
+
+</html>
